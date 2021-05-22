@@ -26,7 +26,7 @@ class RecyclerViewAdapter(private val context: Context):
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = items[position]
         holder.charaImage.setImageResource(item.characterImageResource)
-        holder.charaDetailTextView.text = item.courseName
+        holder.charaNameTextView.text = item.courseName
         holder.charaDetailTextView.text = item.description
     }
 
@@ -37,7 +37,7 @@ class RecyclerViewAdapter(private val context: Context):
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val charaImage: ImageView = view.findViewById(R.id.characterImageView)
-        val charaNameTextView: ImageView = view.findViewById(R.id.courseNameTextView)
+        val charaNameTextView: TextView = view.findViewById(R.id.courseNameTextView)
         val charaDetailTextView: TextView = view.findViewById(R.id.descriptionTextView)
     }
 }
